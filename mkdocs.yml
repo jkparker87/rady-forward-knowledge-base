@@ -1,6 +1,10 @@
 site_name: Data Knowledge Base
 site_description: A human-centered knowledge layer connecting business concepts, metrics, content domains, and curated data assets.
-site_url: https://example.org/data-knowledge-base/
+site_url: https://jkparker87.github.io/rady-forward-knowledge-base/
+repo_name: rady-forward-knowledge-base
+repo_url: https://github.com/jkparker87rady-forward-knowledge-base
+edit_uri: edit/main/docs/
+
 use_directory_urls: true
 strict: true
 
