@@ -1,0 +1,153 @@
+site_name: Data Knowledge Base
+site_description: A human-centered knowledge layer connecting business concepts, metrics, content domains, and curated data assets.
+site_url: https://example.org/data-knowledge-base/
+use_directory_urls: true
+strict: true
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - meta
+  - tags:
+      tags_hierarchy: true
+  - typeset
+
+hooks:
+  - hooks/knowledge_graph.py
+
+watch:
+  - includes
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Start Here:
+      - start-here/index.md
+      - How our data works: start-here/how-data-works.md
+      - Find the right data: start-here/find-right-data.md
+      - Understand data quality: start-here/data-quality.md
+  - Domains:
+      - domains/index.md
+      - Scheduling & Access: domains/scheduling-access.md
+      - Inpatient Care: domains/inpatient-care.md
+      - Emergency Care: domains/emergency-care.md
+      - Outpatient Care: domains/outpatient-care.md
+      - Surgical Services: domains/surgical-services.md
+  - Business Concepts:
+      - concepts/index.md
+      - Appointment: concepts/appointment.md
+      - Encounter: concepts/encounter.md
+      - Referral: concepts/referral.md
+      - Patient: concepts/patient.md
+      - Provider: concepts/provider.md
+      - Department & Location: concepts/department-location.md
+      - Patient Class: concepts/patient-class.md
+      - Census Day: concepts/census-day.md
+  - Metrics:
+      - metrics/index.md
+      - No-show Rate: metrics/no-show-rate.md
+      - Appointment Lead Time: metrics/appointment-lead-time.md
+      - Census: metrics/census.md
+      - Length of Stay: metrics/length-of-stay.md
+      - ED Boarding Time: metrics/ed-boarding-time.md
+  - Data Assets:
+      - data-assets/index.md
+      - Curated tables: data-assets/curated-tables.md
+      - Views: data-assets/views.md
+      - Functions: data-assets/functions.md
+      - Example assets:
+          - Curated Appointment: data-assets/examples/curated-appointment.md
+          - Curated Encounter: data-assets/examples/curated-encounter.md
+          - Daily Census: data-assets/examples/daily-census.md
+          - Provider Dimension: data-assets/examples/dim-provider.md
+          - Business Days Function: data-assets/examples/fn-business-days.md
+  - Guides:
+      - guides/index.md
+      - Understand grain: guides/grain.md
+      - Join data safely: guides/joins.md
+      - Choose the right date: guides/dates.md
+      - Rates & denominators: guides/rates-denominators.md
+      - Null, zero & unknown: guides/null-zero.md
+      - Events vs snapshots: guides/snapshots-events.md
+      - Historical changes: guides/historical-changes.md
+      - Data quality assessment: guides/data-quality-assessment.md
+      - Question-to-data pathways:
+          - Clinic access: guides/question-to-data/clinic-access.md
+          - Inpatient utilization: guides/question-to-data/inpatient-utilization.md
+          - Emergency flow: guides/question-to-data/emergency-flow.md
+  - Governance:
+      - governance/index.md
+      - Ownership & stewardship: governance/ownership-stewardship.md
+      - Source of truth: governance/source-of-truth.md
+      - Change management: governance/change-management.md
+      - Documentation lifecycle: governance/documentation-lifecycle.md
+  - Browse:
+      - Tags: tags.md
+  - Authoring:
+      - authoring/index.md
+      - Content model: authoring/content-model.md
+      - Metadata reference: authoring/metadata-reference.md
+      - Contributing: authoring/contributing.md
+      - Templates:
+          - Domain template: authoring/templates/domain-template.md
+          - Concept template: authoring/templates/concept-template.md
+          - Metric template: authoring/templates/metric-template.md
+          - Data asset template: authoring/templates/data-asset-template.md

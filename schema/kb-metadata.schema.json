@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Base Front Matter",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kb": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z_]+\\.[a-z0-9-]+$"
+        },
+        "type": {
+          "enum": [
+            "collection",
+            "domain",
+            "concept",
+            "metric",
+            "data_asset",
+            "guide",
+            "governance",
+            "reference",
+            "template"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "approved",
+            "deprecated"
+          ]
+        },
+        "classification": {
+          "type": "string"
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_systems": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "owners": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "last_reviewed": {
+              "type": "string"
+            },
+            "cadence": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
