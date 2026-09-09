@@ -1,76 +1,80 @@
 ---
-title: Data Knowledge Base
-description: A shared knowledge layer for understanding what organizational data means,
-  how it connects, and how to use it responsibly.
+title: Rady Forward
 tags:
-- Type/Reference
-kb:
-  id: reference.home
-  type: reference
-  status: approved
-  render_connections: false
-  review:
-    last_reviewed: '2026-09-08'
+  - start-here
+  - enterprise
 ---
 
+# Rady Forward
 
-# Data Knowledge Base
+## Data, Analytics & AI Knowledge Hub
 
-This site connects the **business meaning of the work** to the **technical structures that represent it in data**.
+Rady Forward is the front door to institutional knowledge about **data, analytics, AI, and data-driven decision making**.
+
+It is designed to help people answer questions such as:
+
+- How should I approach an analytics request?
+- What standards should I follow?
+- Which platform should I use?
+- How do our major data systems fit together?
+- How should a data product be designed for its users?
+- What methods and practices are recommended?
+- Where is the authoritative definition or implementation?
 
 <div class="grid cards" markdown>
 
--   :material-map-marker-path: **Explore a content domain**
+-   :material-compass-outline:{ .lg .middle } **Start Here**
 
-    Start with the operational area you are trying to understand: scheduling and access, inpatient care, emergency care, outpatient care, or surgical services.
+    ---
 
-    [Browse domains](domains/index.md)
+    Understand the knowledge hub, platform landscape, and where different kinds of knowledge belong.
 
--   :material-book-open-variant: **Understand a business concept**
+    [:octicons-arrow-right-24: Start here](start-here/index.md)
 
-    Learn how concepts such as appointment, encounter, referral, provider, department, and patient class are represented analytically.
+-   :material-account-hard-hat:{ .lg .middle } **How We Work**
 
-    [Browse concepts](concepts/index.md)
+    ---
 
--   :material-calculator-variant: **Define a metric**
+    Learn how analytics work is scoped, managed, validated, reviewed, and delivered.
 
-    See the population, numerator, denominator, time basis, exclusions, and common interpretation problems behind important measures.
+    [:octicons-arrow-right-24: Explore workflows](how-we-work/index.md)
 
-    [Browse metrics](metrics/index.md)
+-   :material-ruler-square:{ .lg .middle } **Standards & Playbooks**
 
--   :material-database-search: **Find a curated data asset**
+    ---
 
-    Use documented curated tables, views, and functions as recommended analytical entry points. Exhaustive object discovery belongs in Alation.
+    Find shared practices for SQL, analytics methods, data quality, and documentation.
 
-    [Browse data assets](data-assets/index.md)
+    [:octicons-arrow-right-24: View standards](standards/index.md)
 
--   :material-sign-direction: **Start with a question**
+-   :material-database-outline:{ .lg .middle } **Systems & Data Flows**
 
-    Use question-to-data pathways to move from a business question to the right concepts, dates, metrics, and assets.
+    ---
 
-    [Browse guides](guides/index.md)
+    Understand the purpose of major platforms and how information moves across the ecosystem.
 
--   :material-shield-check: **Understand trust and ownership**
+    [:octicons-arrow-right-24: Explore systems](systems/index.md)
 
-    Learn how definitions are governed, how changes are handled, and who is responsible for business meaning and technical implementation.
+-   :material-robot-outline:{ .lg .middle } **AI & Automation**
 
-    [Browse governance](governance/index.md)
+    ---
+
+    Learn how AI-assisted workflows and automation support safe, repeatable analytics work.
+
+    [:octicons-arrow-right-24: Explore AI](ai-automation/index.md)
+
+-   :material-school-outline:{ .lg .middle } **Learning**
+
+    ---
+
+    Build practical data and AI literacy focused on asking and answering questions effectively.
+
+    [:octicons-arrow-right-24: Learn](learning/index.md)
 
 </div>
 
-## The core model
+## What this site is — and is not
 
-```mermaid
-flowchart LR
-    Q[Business question] --> D[Content domain]
-    D --> C[Business concepts]
-    C --> M[Metric definitions]
-    C --> A[Curated data assets]
-    M --> A
-    A --> G[Analytical guidance]
-    G --> I[Interpretable answer]
-```
+Rady Forward is a **human knowledge layer**. It explains practices, context, workflows, and how the pieces fit together.
 
-The site is designed around stable metadata relationships rather than navigation alone. A concept can belong to several domains, a metric can depend on several concepts, and a curated asset can support several questions without duplicating the underlying explanation.
-
---8<-- "includes/snippets/alation-boundary.md"
+It should not become a second copy of every data catalog entry, notebook, SQL object, or platform configuration. When another system is the authoritative source, Rady Forward should provide enough context to help the user understand it and then link to that source.

@@ -1,28 +1,35 @@
 ---
 title: Start Here
-description: How to use the knowledge base to move from a question to trustworthy
-  data.
 tags:
-- Type/Reference
-kb:
-  id: reference.start-here
-  type: reference
-  status: approved
-  render_connections: true
-  review:
-    last_reviewed: '2026-09-08'
+  - start-here
 ---
 
+# Start Here
 
-# Start here
+Rady Forward organizes enterprise knowledge around a simple question:
 
-Use the knowledge base in the order that matches your question, not the order of the database.
+> **What does someone need to know to work effectively with data, analytics, AI, and data products?**
 
-1. **Name the business question.** What decision are you trying to support?
-2. **Choose the content domain.** Which workflow creates the event or state you care about?
-3. **Clarify the business concepts.** What do words such as encounter, appointment, referral, or census actually mean here?
-4. **Choose the metric and time basis.** What population, date, numerator, denominator, and exclusions are required?
-5. **Use a curated entry point.** Prefer an approved curated table, view, or function over rebuilding business logic from source tables.
-6. **Check quality and limitations.** Determine whether the data is complete, valid, timely, and appropriate for the intended interpretation.
+The site is organized by the kind of question a user is trying to answer rather than by repository folder or organizational chart.
 
-The knowledge base is useful for both technical and non-technical users. Data engineers should be able to see how an object is interpreted by consumers; data consumers should be able to see where a business definition becomes technical implementation.
+## Core sections
+
+| Section | Primary question |
+|---|---|
+| How We Work | How should work move from request to delivery? |
+| Standards & Playbooks | What practices should I follow? |
+| Product Design | How should we design data products around user needs? |
+| Systems & Data Flows | What does each platform do and how do they fit together? |
+| AI & Automation | How should AI and automation support the work? |
+| Governance & Communities | Who maintains standards and how do they evolve? |
+| Learning | How do I build the skills to use data and AI effectively? |
+| Technical Reference | Where can technical practitioners find implementation-specific guidance? |
+
+## Guiding principles
+
+1. **One source of truth whenever possible.**
+2. **Explain context; link to implementation.**
+3. **Write for the audience that needs the knowledge.**
+4. **Prefer reusable guidance over project-specific notes.**
+5. **Treat documentation as a maintained product, not an archive.**
+6. **Use version control and review for substantive changes.**
