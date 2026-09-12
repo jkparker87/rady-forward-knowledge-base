@@ -32,4 +32,4 @@ Rady Forward is maintained through Markdown and GitHub.
 
 ## Adding a new page
 
-Use `docs/templates/page-template.md` as a starting point, then add the page to `nav:` in `mkdocs.yml`.
+Follow [Publishing a New Document](how-we-work/publishing-a-new-document.md) for the complete authoring, preview, review, and publication workflow.
